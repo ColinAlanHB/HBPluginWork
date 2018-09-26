@@ -1,0 +1,83 @@
+/*******************v1.0 2017/06/22 by:zl******************/
+/**定义伸缩盒子模型**/
+.co-flex{
+	display: flex;
+	display: -webkit-flex
+}
+/**定义垂直方向盒子模型**/
+.co-ver{
+	flex-direction:column;
+	-webkit-flex-direction:column;
+}
+/**盒子模型水平反向布局**/
+.co-x-revR{
+	flex-direction: row-reverse;
+	-webkit-flex-direction:row-reverse;
+}
+/**盒子模型垂直反向布局**/
+.co-y-revR{
+	flex-direction: column-reverse;
+	-webkit-flex-direction:column-reverse;
+}
+/**垂直居中**/
+.co-ac{
+	align-items: center;
+	-webkit-align-items:center;
+}
+/**垂直居下**/
+.co-ae{
+	align-items: flex-end;
+	-webkit-align-items:flex-end;
+}
+/**元素水平居中**/
+.co-jc{
+	justify-content: center;
+	-webkit-justify-content:center;
+}
+/**元素水平居右**/
+.co-je{
+	justify-content: flex-end;
+	-webkit-justify-content:flex-end;
+}
+/**元素两端对齐**/
+.co-jsb{
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
+}
+/**元素以相同间距分配对齐**/
+.co-jsa{
+	justify-content: space-around;
+	-webkit-justify-content:space-around;
+}
+/**子元素固定宽度弹性布局且换行**/
+.co-wp{
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+/**弹性盒子等分比例分配**/
+.co-f1{
+	flex:1;
+	-webkit-flex:1;
+	position:relative;
+}
+.co-f2{
+	flex:2;
+	-webkit-flex:2;
+	position:relative;
+}
+.co-f3{
+	flex:3;
+	-webkit-flex:3;
+	position:relative;
+}
+.co-f4{
+	flex:4;
+	-webkit-flex:4;
+	position:relative;
+}
+.co-f5{
+	flex:5;
+	-webkit-flex:5;
+	position:relative;
+}
