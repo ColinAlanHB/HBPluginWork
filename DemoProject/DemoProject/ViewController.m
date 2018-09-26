@@ -115,7 +115,7 @@ static NSString *CorEngineJavaScriptCoreBaseJS;
 - (NSString *)generateBaseJS{
     __block NSMutableDictionary<NSString *,PluginInfo *> *plugins = [NSMutableDictionary dictionary];
     
-    NSArray <PluginInfo *> *enginePlugins = @[[self pluginDemo1],[self pluginDemo2]];
+    NSArray <PluginInfo *> *enginePlugins = @[[self pluginDemo1]];
     [enginePlugins enumerateObjectsUsingBlock:^(PluginInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [plugins setValue:obj forKey:obj.name];
     }];
@@ -143,21 +143,10 @@ static NSString *CorEngineJavaScriptCoreBaseJS;
 }
 
 
-- (NSDictionary *)exceptions{
-    return @{
-             };
-}
-
 - (PluginInfo *)pluginDemo1{
     PluginInfo *pluginDemo1 = [[PluginInfo alloc] initWithName:@"PluginDemo1"];
     pluginDemo1.methods = [@[@"demo1alert"] mutableCopy];
     return pluginDemo1;
-}
-
-- (PluginInfo *)pluginDemo2{
-    PluginInfo *pluginDemo2 = [[PluginInfo alloc] initWithName:@"PluginDemo2"];
-    pluginDemo2.methods = [@[@"demo2alert"] mutableCopy];
-    return pluginDemo2;
 }
 
 
@@ -194,7 +183,6 @@ static NSString *CorEngineJavaScriptCoreBaseJS;
         return [pluginInstance ac_invoke:selector arguments:CorArgsPack(args)];
     }
 #pragma clang diagnostic pop
-    
     
     return nil;
 }
